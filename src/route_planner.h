@@ -13,6 +13,7 @@ class RoutePlanner {
     // Add public variables or methods declarations here.
     float GetDistance() const {return distance;}
     void AStarSearch();
+    static bool Compare(RouteModel::Node * n1, RouteModel::Node * n2);
 
     // The following methods have been made public so we can test them individually.
     void AddNeighbors(RouteModel::Node *current_node);
