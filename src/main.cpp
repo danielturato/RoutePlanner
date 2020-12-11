@@ -52,15 +52,23 @@ int main(int argc, const char **argv)
             osm_data = std::move(*data);
     }
     
-    float start_x, start_y, end_x, end_y;
-    std::cout << "Start X: ";
-    std::cin >> start_x;
-    std::cout << "Start Y: ";
-    std::cin >> start_y;
-    std::cout << "End X: ";
-    std::cin >> end_x;
-    std::cout << "End Y: ";
-    std::cin >> end_y;
+    float start_x = 101, start_y = 101, end_x = 101, end_y = 101;
+    while (start_x < 0 || start_x > 100) {
+        std::cout << "Start X: ";
+        std::cin >> start_x;
+    }
+    while (start_y < 0 || start_y > 100) {
+        std::cout << "Start Y: ";
+        std::cin >> start_y;
+    }
+    while (end_x < 0 || end_x > 100) {
+        std::cout << "End X: ";
+        std::cin >> end_x;
+    }
+    while (end_y < 0 || end_y > 100) {
+        std::cout << "End Y: ";
+        std::cin >> end_y;
+    }
 
     // Build Model.
     RouteModel model{osm_data};
