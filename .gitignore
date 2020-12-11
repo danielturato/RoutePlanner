@@ -6,4 +6,4 @@ test.cpp
 build/
 bin/
 lib/
-thirdparty/PO267_RefImpl/
+PO267_RefImpl/
